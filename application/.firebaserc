@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "pepe-pwa-qa",
+    "prod": "pepe-pwa-prod"
+  }
+}

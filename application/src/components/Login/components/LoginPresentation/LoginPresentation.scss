@@ -1,0 +1,44 @@
+.login {
+    display: inline-block;
+    height: calc(100vh + 30px);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: #F5F7F8;
+
+    hr {
+        height: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: #6ACAC4;
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 24px;
+        font-style: normal;
+    }
+
+    &-header {
+        margin: 30px 0 -54px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            padding: 0;
+            width: 245px;
+            height: 192px;
+            margin: 0;
+            fill: #7FD4CF;
+        }
+    }
+
+    &-form {
+        padding-top: 30px;
+        height: calc(75% - 30px);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

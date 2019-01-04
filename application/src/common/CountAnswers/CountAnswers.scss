@@ -1,0 +1,46 @@
+.CountAnswers {
+    color: rgb(74, 74, 74);
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+    margin-top: -25px;
+    max-width: 480px;
+    width: 100%;
+
+    a & {
+        align-self: flex-start;
+        width: auto;
+    }
+    
+    p {
+        line-height: 20px;
+        font-size: 13px;
+        font-weight: 800;
+        padding-left: 10px;
+    }
+
+    svg {
+        fill: rgb(74, 74, 74);
+        margin: 0;
+        height: 15px;
+        width: 15px;
+        padding: 0;
+    }
+
+    &__not-viewed {
+        border: 1px solid #9bdad6;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        margin-left: 15px;
+    }
+
+    &__num {
+        font-size: 13px;
+        font-weight: 800;
+        padding: 0 6px;
+    }
+}

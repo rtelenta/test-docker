@@ -1,0 +1,97 @@
+@import "_config";
+
+.DateRangePickerInput {
+  background-color: $white;
+  display: grid;
+  border: 0!important;
+  &__disabled {
+    background: $concrete;
+  }
+  &__withBorder {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    border: 1px solid $alto;
+  }
+  &__rtl {
+    direction: rtl;
+  }
+  &__block {
+    display: block;
+  }
+  &__showClearDates {
+    padding-right: 30px;
+  }
+  &_arrow {
+    display: none;
+    vertical-align: middle;
+    color: $color_gravel_approx;
+  }
+  &_arrow_svg {
+    vertical-align: middle;
+    fill: $color_gravel_approx;
+    height: 24px;
+    width: 24px;
+  }
+  &_clearDates {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px 0 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(-50%);
+    &__small {
+      padding: 6px;
+    }
+    &_default {
+      &:focus {
+        background: $alto;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+      }
+      &:hover {
+        background: $alto;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+      }
+    }
+    &__hide {
+      visibility: hidden;
+    }
+    &_svg {
+      fill: $color_gunsmoke_approx;
+      height: 12px;
+      width: 15px;
+      vertical-align: middle;
+    }
+    &_svg__small {
+      height: 9px;
+    }
+  }
+  &_calendarIcon {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 0 5px 0 10px;
+    &_svg {
+      fill: $color_gunsmoke_approx;
+      height: 15px;
+      width: 14px;
+      vertical-align: middle;
+    }
+  }
+}

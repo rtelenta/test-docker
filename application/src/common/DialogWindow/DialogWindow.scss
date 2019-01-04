@@ -1,0 +1,55 @@
+.DialogWindow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -50px;
+
+    &-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+
+        @media (min-width: 360px) {
+            padding: 30px 35px;
+        }
+    }
+    
+    &-img {
+        margin-bottom: 20px;
+
+        @media (min-height: 500px) {
+            margin-bottom: 40px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &-text {
+        max-width: 310px;
+        margin-bottom: 50px;
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0px;
+            color: rgb(116, 142, 152);
+            margin-bottom: 0;
+        }
+
+        .Cpjsc {
+            line-height: 32px;
+        }
+    }
+
+    .LinkButton {
+        max-width: 320px;
+    }
+}

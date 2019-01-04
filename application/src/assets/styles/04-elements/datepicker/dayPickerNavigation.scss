@@ -1,0 +1,100 @@
+@import "_config";
+@import "../input";
+
+.DayPickerNavigation {
+  position: relative;
+  z-index: 2;
+  &__verticalDefault {
+    bottom: 0;
+    height: 52px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  &__verticalScrollableDefault {
+    position: relative;
+  }
+  &_button {
+    border: 0!important;
+    //Instead of the line below you could use @include user-select($select)
+    cursor: pointer;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &__default {
+      background: $action-color;
+      border: 1px solid $action-color;
+      color: white;
+      &:focus {
+        border: 1px solid $action-color;
+      }
+      &:hover {
+        border: 1px solid $action-color;
+      }
+      &:active {
+        background: $action-color;
+      }
+    }
+    &:before {
+      @extend %formInput_arrow;
+      top: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+    }
+    &__horizontalDefault {
+      line-height: .78;
+      padding: 3px 9px;
+      position: absolute;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      top: 0;
+    }
+    &__verticalDefault {
+      background: $white;
+      box-shadow: 0 0 5px 2px $black_10;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      display: inline-block;
+      height: 100%;
+      padding: 5px;
+      position: relative;
+      width: 50%;
+    }
+    user-select: none;
+  }
+  &_leftButton__horizontalDefault {
+    left: 0;
+    &:before {
+      transform: rotate(135deg);
+      left: 6px;
+    }
+  }
+  &_rightButton__horizontalDefault {
+    right: 0;
+    &:before {
+      transform: rotate(-45deg);
+      right: 6px;
+    }
+  }
+  &_nextButton {
+    &__verticalDefault {
+      border-left: 0;
+    }
+    &__verticalScrollableDefault {
+      width: 100%;
+    }
+  }
+  &_svg {
+    display: none;
+    &__horizontal {
+      display: none;
+      height: 17px;
+      width: 17px;
+      fill: white;
+    }
+    &__vertical {
+      height: 42px;
+      width: 42px;
+      fill: $color_gravel_approx;
+    }
+  }
+}

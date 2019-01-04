@@ -1,0 +1,98 @@
+$hamburger-types     : (spin);
+$hamburger-layer-border-radius : 0;
+$hamburger-layer-width         : 24px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 5px;
+$hamburger-padding-x: 30px;
+$hamburger-padding-y: 20px;
+
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+
+.MainMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 800;
+
+    .SideMenu &__overlay.ReactModal__Overlay {
+        z-index: 700;
+    }
+
+    &__inner {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+
+        .Avatar {
+            height: auto;
+            line-height: normal;
+            flex-direction: column;
+            align-items: center;
+
+            &-picture {
+                width: 80px;
+                height: 80px;
+                border: 3px solid #6C6B72;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 29px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logout {
+        color: #9BDAD5;
+        font-size: 13px;
+        line-height: 20px;
+        background: none;
+        border: 0;
+        font-weight: bold;
+        padding: 20px 10px;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            padding: 0;
+            fill: #9BDAD5;
+            height: 16px;
+            width: 16px;
+            margin-right: 7px;
+        }
+    }
+}
+
+.hamburger {
+    margin-top: 20px;
+    
+    &.is-active {
+        .hamburger-inner {
+            width: $hamburger-layer-width;
+        }
+    }
+
+    &-inner {
+        width: 16px;
+    
+        &,
+        &:before,
+        &:after {
+            right: 0;
+            transition-property: all;
+        }
+    }
+}
+

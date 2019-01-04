@@ -1,0 +1,68 @@
+@import "./../../01-settings/settings";
+
+//colors
+$color_persian_green_approx: $action-color;
+$white: #fff;
+$alto: #dbdbdb;
+$concrete: #f2f2f2;
+$color_gunsmoke_approx: #82888a;
+$black_30: rgba(0,0,0,.3);
+$color_ghost_approx: #cacccd;
+$color_teal_approx: #008489;
+$color_mercury_approx: #e4e7e7;
+$color_gravel_approx: #484848;
+$color_wild_sand_approx: #f4f5f5;
+$color_gallery_approx: #eceeee;
+$color_colonial_white_approx: #ffe8bc;
+$color_goldenrod_approx: #ffce71;
+$color_aquamarine_blue_approx: #66e2da;
+$color_turquoise_approx: #33dacd;
+$color_ice_cold_approx: #b2f1ec;
+$color_riptide_approx: #80e8e0;
+$color_blue_lagoon_approx: #007a87;
+$color_tapa_approx: #757575;
+$color_cloud_approx: #c4c4c4;
+$black_10: rgba(0,0,0,.1);
+$black_5: rgba(0,0,0,.05);
+$black_7: rgba(0,0,0,.07);
+
+//@extend-elements
+//original selectors
+//.CalendarDay__selected_span:active, .CalendarDay__selected_span:hover
+%extend_1 {
+  background: $action-color;
+  border: 1px solid $action-color;
+  color: $white;
+}
+
+//original selectors
+//.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover
+%extend_2 {
+  background: $color_persian_green_approx;
+  border: 1px solid $color_persian_green_approx;
+  color: $white;
+}
+
+//original selectors
+//.CalendarDay__hovered_span, .CalendarDay__hovered_span:hover
+%extend_3 {
+  background: $color_ice_cold_approx;
+  border: 1px solid $color_riptide_approx;
+  color: $color_blue_lagoon_approx;
+}
+
+//original selectors
+//.CalendarDay__blocked_calendar, .CalendarDay__blocked_calendar:active, .CalendarDay__blocked_calendar:hover
+%extend_4 {
+  background: $color_ghost_approx;
+  border: 1px solid $color_ghost_approx;
+  color: $color_gunsmoke_approx;
+}
+
+//original selectors
+//.CalendarDay__blocked_out_of_range, .CalendarDay__blocked_out_of_range:active, .CalendarDay__blocked_out_of_range:hover
+%extend_5 {
+  background: $white;
+  border: 1px solid $color_mercury_approx;
+  color: $color_ghost_approx;
+}

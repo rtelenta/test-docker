@@ -1,0 +1,27 @@
+.MyQuestionsPresentation {
+    height: 100vh;
+
+    &-content {
+        padding: 30px;
+        overflow: auto;
+        height: auto;
+        margin-bottom: 80px;
+
+        &-description {
+            font-size: 13px;
+            line-height: 20px;
+            color: rgb(116, 142, 152);
+        }
+
+        &-infinite {
+            height: auto;
+        }
+
+        &-empty {
+            font-size: 18px;
+            font-weight: 800;
+            text-align: center;
+            color: rgb(116, 142, 152);
+        }
+    } 
+}

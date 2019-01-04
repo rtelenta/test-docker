@@ -1,0 +1,57 @@
+.SideMenu {
+    &__body {
+        &--open {
+            overflow: hidden;
+        }
+    }
+
+    .ReactModal {
+        &__Content {
+            background: #F3F4F6;
+            position: absolute;
+            height: 100%;
+            outline: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-top: 60px;
+            width: 100%;
+            max-width: 320px;
+            top: 0;
+            right: 0;
+            transform: translate(100%);
+            transition: transform .5s;
+            display: none;
+
+            &--after-open {
+                display: block;
+            }
+
+            &--is-open {
+                display: block;
+                transform: translate(0);
+            }
+        }
+
+        &__Overlay {
+            background: rgba(68, 72, 74, .75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            overflow-y: auto;
+            z-index: 900;
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+            overflow-x: hidden;
+
+            &--after-open {
+                opacity: 1;
+            }
+
+            &--after-close {
+                opacity: 0;
+            }
+        }
+    }
+}

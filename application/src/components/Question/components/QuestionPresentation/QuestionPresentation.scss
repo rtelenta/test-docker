@@ -1,0 +1,65 @@
+@import "../../../../assets/styles/01-settings/settings.scss";
+
+.question {
+  flex-direction: row;
+  height: 100vh;
+  justify-content: space-between;
+  margin-top: -23px;
+
+  &-section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    &--background {
+      background: $main-color;
+      flex-direction: column;
+      width: 33%;
+    }
+    &--form {
+      margin-bottom: auto;
+      margin-top: auto;
+      width: 67%;
+    }
+  }
+  &-image {
+    width: 20%;
+  }
+  &-form {
+    margin: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-header {
+    border-bottom: 1px rgb(221, 227, 230) solid;
+    height: 86px;
+  }
+  &-title {
+    margin-left: 29px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &-back {
+    margin-left: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    div {
+      color: rgb(106, 202, 196);
+      font-size: 14px;
+      font-weight: 1;
+    }
+
+    svg {
+      height: 35px;
+      width: 35px;
+      fill: rgb(106, 202, 196);
+    }
+  }
+
+}

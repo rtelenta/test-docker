@@ -1,0 +1,113 @@
+.ModalError {
+    &__body {
+        &--open {
+            overflow: hidden;
+        }
+    }
+
+    .ReactModal {
+        .Cpjsc {
+            font-size: 23px;
+        }
+
+        &__Content {
+            background: white;
+            position: absolute;
+            margin: 60px 25px;
+            min-height: calc(100% - 120px);
+            outline: 0;
+            border-radius: 10px;
+            padding-top: 40px;
+            width: calc(100% - 50px);
+
+            .DialogWindow {
+                height: auto;
+                margin-top: 0;
+
+                &-text {
+                    max-width: 100%;
+                }
+
+                &-inner {
+                    width: 100%;
+                }
+
+                .ReactModal__description {
+                    font-size: 13px;
+                    line-height: 20px;
+                    display: flex;
+                    justify-content: center;
+
+                    &--slider {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .LinkButton {
+                    margin-bottom: 15px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            .Slider {
+                margin: 0 -20px;
+
+                @media (min-width: 360px) {
+                    margin: 0 -30px;
+                }
+            }
+        }
+
+        &__Box {
+            border-top: 1px solid rgb(204, 214, 220);
+            margin-top: 30px;
+            padding-top: 15px;
+            text-align: left;
+        }
+
+        &__Overlay {
+            background: rgba(68, 72, 74, .75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow-y: auto;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+
+            &--after-open {
+                opacity: 1;
+            }
+
+            &--after-close {
+                opacity: 0;
+            }
+        }
+
+        &__subtitle {
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        &__close {
+            background: none;
+            border: 0;
+            outline: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 18px;
+            padding: 0;
+
+            svg {
+                fill: #9bdad6;
+                width: 22px;
+                padding: 0;
+                height: 22px;
+            }
+        }
+    }
+}

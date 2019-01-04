@@ -1,0 +1,22 @@
+.CreatedAt {
+    color: rgb(129, 168, 210);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 13px 0;
+    
+    p {
+        padding-left: 10px;
+        line-height: 20px;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    svg {
+        fill: rgb(129, 168, 210);
+        margin: 0;
+        height: 15px;
+        width: 15px;
+        padding: 0;
+    }
+}

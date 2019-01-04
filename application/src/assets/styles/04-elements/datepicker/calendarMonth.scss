@@ -1,0 +1,34 @@
+@import "_config";
+
+.CalendarMonth {
+  background: $white;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+  //Instead of the line below you could use @include user-select($select)
+  &_table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &_verticalSpacing {
+    border-collapse: separate;
+  }
+  &_caption {
+    background: $action-color;
+    caption-side: initial;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+    margin-bottom: 25px;
+    padding-top: 0;
+    text-align: center;
+    text-transform: capitalize;
+    &__verticalScrollable {
+      padding-bottom: 7px;
+      padding-top: 12px;
+    }
+  }
+  user-select: none;
+}

@@ -1,0 +1,36 @@
+@import "../01-settings/settings";
+
+%formInput {
+  position: relative;
+  display: inline-block;
+}
+%formInput_arrow {
+  border: solid $action-color;
+  border-width: 0 2px 2px 0;
+  content: '';
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  vertical-align: middle;
+}
+%formInput_input {
+  border-bottom: 1px solid $main-color;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 0 11px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 99%;
+}
+
+%formInput_input--active {
+  border-bottom: 1px solid $action-color;
+}

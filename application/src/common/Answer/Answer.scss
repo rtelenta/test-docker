@@ -1,0 +1,82 @@
+.Answer {
+    color: rgb(74, 74, 74);
+    background-color: rgb(243, 244, 246);
+    border: rgb(204, 214, 220) 1px solid;
+    padding: 20px 0;
+
+    &-closed {
+        background-color: rgb(235, 239, 242);
+    }
+
+    &-before {
+        position: relative;
+        float: left;
+        
+        &-circle {
+            background-color: rgb(243, 244, 246);
+            border: 2px solid rgb(204, 214, 220);
+            width: 13px;
+            height: 13px;
+            margin-left: -7px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+
+        .icon {
+            fill: rgb(255, 131, 137);
+            margin-left: -20px;
+            margin-top: -3px;
+            height: 40px;
+            width: 40px;
+        }
+    }
+    
+    &-best {
+        margin-bottom: 20px;
+        height: 32px;
+        display: flex;
+
+        span {
+            color: rgb(255, 131, 137);
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 32px;
+        }
+
+        & > span {
+            line-height: 16px;
+            align-self: center;
+            display: block;
+            padding-right: 10px;
+        }
+
+        div span {
+            color: unset;
+            font-size: 11px;
+            font-weight: 800;
+            font-style: normal; 
+        }
+    }
+
+    &-content {
+        padding: 0 20px;
+
+        &-text {
+            font-size: 13px;
+            line-height: 20px;
+            color: rgb(74, 74, 74);
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &-image {
+            padding-top: 20px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

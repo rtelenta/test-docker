@@ -1,0 +1,22 @@
+.Back {
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+
+    div {
+      color: rgb(106, 202, 196);
+      font-size: 14px;
+      font-weight: 1;
+      height: 100%;
+      line-height: 38px;
+    }
+
+    svg {
+      height: 35px;
+      width: 35px;
+      fill: rgb(106, 202, 196);
+      margin: 0;
+    }
+}

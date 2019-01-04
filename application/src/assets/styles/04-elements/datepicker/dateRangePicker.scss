@@ -1,0 +1,62 @@
+@import "_config";
+
+.DateRangePicker {
+  display: inline-block;
+  position: relative;
+  &__block {
+    display: block;
+  }
+  &_picker {
+    background-color: $white;
+    position: absolute;
+    top: 30px!important;
+    z-index: 1;
+    &__rtl {
+      direction: rtl;
+    }
+    &__directionLeft {
+      left: 0;
+    }
+    &__directionRight {
+      right: 0;
+    }
+    &__portal {
+      background-color: $black_30;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    &__fullScreenPortal {
+      background-color: $white;
+    }
+  }
+  &_closeButton {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    &:focus {
+      color: darken($color_ghost_approx,10%);
+      text-decoration: none;
+    }
+    &:hover {
+      color: darken($color_ghost_approx,10%);
+      text-decoration: none;
+    }
+    &_svg {
+      height: 15px;
+      width: 15px;
+      fill: $color_ghost_approx;
+    }
+  }
+}

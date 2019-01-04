@@ -1,0 +1,16 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: rgb(221, 227, 230) 1px solid;
+
+    & &-title {
+        padding-left: 30px;
+        line-height: 30px;
+    }
+
+    .Point {
+        margin: 0;
+    }
+}

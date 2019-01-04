@@ -1,0 +1,67 @@
+.OnboardingFirst {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15%;
+
+    @media (min-height: 620px) {
+        padding: 15%;
+    }
+    
+    &-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+            max-width: 260px;
+            height: auto;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0 30px 0;
+
+        @media (min-height: 620px) {
+            padding: 40px 0;
+        }
+
+        & &-title {
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        &-description {
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0;
+            text-align: center;
+            color: rgb(116, 142, 152);
+        }
+    }
+
+    &-slider {
+        display: flex;
+        justify-content: center;
+
+        &-page{
+            width: 12px;
+            height: 8px;
+            margin: 0 5px;
+            background-color: rgb(175, 181, 183);
+            border-radius: 5px;
+
+            &-active {
+                background: rgb(155, 218, 214);
+                width: 32px;
+                height: 8px;
+                border-radius: 5px;
+            } 
+        }
+    }
+}

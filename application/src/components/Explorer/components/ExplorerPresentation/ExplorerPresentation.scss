@@ -1,0 +1,62 @@
+.ExplorerPresentation {
+    flex-direction: row;
+    height: 100vh;
+
+    &-content {
+        padding: 12px 30px 30px;
+        overflow: auto;
+        height: auto;
+        margin-bottom: 80px;
+
+        &-description {
+            font-size: 13px;
+            line-height: 20px;
+            color: rgb(116, 142, 152);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                padding-right: 10px;
+            }
+
+            &-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                border: rgb(204, 214, 220) 1px solid;
+                padding: 7px 10px;
+                border-radius: 20px;
+
+                &-text {
+                    padding: 0 5px;
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: rgb(74, 74, 74);
+                }
+
+                &-number {
+                    background-color: rgb(155, 218, 214);
+                    padding: 0 6px;
+                    color: rgb(255, 255, 255);
+                    font-size: 13px;
+                    font-weight: 700;
+                    border-radius: 50%;
+                }
+
+                svg {
+                    padding: 0;
+                    margin: 0;
+                    fill: rgb(74, 74, 74);
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+        }
+        
+        &-infinite {
+            height: auto;
+        }
+    }
+}

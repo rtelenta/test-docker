@@ -1,0 +1,125 @@
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}
+
+.TextPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    span {
+        align-self: flex-start;
+    }
+
+    &-textarea{
+        background-color: rgb(243, 244, 246);
+        border: rgb(204, 214, 220) 1px solid;
+        width: 100%;
+       
+
+        textarea {
+            padding: 15px;
+            height: 100px;
+            width: 100%;
+            border: 0;
+            resize: none;
+            background-color: rgb(243, 244, 246);
+            font-size: 13px;
+            line-height: 20px;
+            @include placeholder(rgb(116, 142, 152));
+            color: rgb(116, 142, 152);
+
+            &:focus {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        &-attach {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &-icon {
+                align-self: flex-end;
+                background-color: rgb(155,218, 214);
+
+                &[disabled] {
+                    background-color: rgb(228, 233, 235);
+                }
+            } 
+
+            .Offline & {
+                display: none;
+            }
+    
+            &--disabled {
+                display: none;
+                
+                .TextPhoto-textarea-attach-icon {
+                    background: #a1a1a1;
+                    cursor: not-allowed;
+                }
+    
+                .Offline & {
+                    display: flex;
+                }
+            }
+            
+            input {
+                display: none;
+            }
+        }
+
+        &-active {
+            background-color: rgb(255, 255, 255);
+
+            textarea {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        &-error {
+            border: 1px #ff8389 solid;
+        }
+    }
+
+    &-photo {
+        height: 30px;
+        background-color: rgb(159, 179, 187);
+        color: rgb(255, 255, 255);
+        align-self: center;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        margin-left: 15px;
+
+        span {
+            align-self: center;
+            font-size: 13px;
+        }
+
+        &-del {
+            padding-left: 5px;
+            color: rgb(255, 255, 255);
+            align-self: center;
+            background-color: rgb(159, 179, 187);
+            border-radius: 50%;
+            border: 0;
+        }
+    }
+}

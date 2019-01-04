@@ -1,0 +1,118 @@
+@import "_config";
+
+.CalendarDay {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  border: 0!important;
+  border-radius: 50%;
+  &:active {
+    outline: 0;
+  }
+
+  &__defaultCursor {
+    cursor: default;
+  }
+  &__default {
+    border: 1px solid $color_mercury_approx;
+    color: $color_gravel_approx;
+    background: $white;
+    &:hover {
+      background: $color_mercury_approx;
+      border: 1px double $color_mercury_approx;
+      color: inherit;
+    }
+  }
+  &__hovered_offset {
+    background: $color_wild_sand_approx;
+    border: 1px double $color_mercury_approx;
+    color: inherit;
+  }
+  &__outside {
+    border: 0;
+    background: $white;
+    color: $color_gravel_approx;
+    &:hover {
+      border: 0;
+    }
+  }
+  &__blocked_minimum_nights {
+    background: $white;
+    border: 1px solid $color_gallery_approx;
+    color: $color_ghost_approx;
+    &:active {
+      background: $white;
+      color: $color_ghost_approx;
+    }
+    &:hover {
+      background: $white;
+      color: $color_ghost_approx;
+    }
+  }
+  &__highlighted_calendar {
+    background: $color_colonial_white_approx;
+    color: $color_gravel_approx;
+    &:active {
+      background: $action-color;
+      color: $action-color;
+    }
+    &:hover {
+      background: $action-color;
+      color: $action-color;
+    }
+  }
+  &__selected_span {
+    background: lighten($action-color, 10%);
+    border: 1px solid lighten($action-color, 10%);
+    color: $white;
+    &:active {
+      @extend %extend_1;
+    }
+    &:hover {
+      @extend %extend_1;
+    }
+  }
+  &__last_in_range {
+    border-right: $color_persian_green_approx;
+  }
+  &__selected {
+    @extend %extend_2;
+    &:active {
+      @extend %extend_2;
+    }
+    &:hover {
+      @extend %extend_2;
+    }
+  }
+  &__hovered_span {
+    @extend %extend_3;
+    &:hover {
+      @extend %extend_3;
+    }
+    &:active {
+      background: $action-color;
+      border: 1px solid $action-color;
+      color: $color_blue_lagoon_approx;
+    }
+  }
+  &__blocked_calendar {
+    @extend %extend_4;
+    &:active {
+      @extend %extend_4;
+    }
+    &:hover {
+      @extend %extend_4;
+    }
+  }
+  &__blocked_out_of_range {
+    @extend %extend_5;
+    &:active {
+      @extend %extend_5;
+    }
+    &:hover {
+      @extend %extend_5;
+    }
+  }
+}

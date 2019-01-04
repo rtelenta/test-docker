@@ -1,0 +1,35 @@
+.Slider {
+    position: relative;
+    min-height: 40px;
+    padding: 0 50px;
+
+    &__button {
+        position: absolute;
+        top: calc(50% - 50px);
+        margin: 0;
+        padding: 0;
+        margin-top: -20px;
+        border: 0;
+        background: none;
+
+        .icon {
+            fill: #9bdad6;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    .react-swipeable-view-container {
+        transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s !important;
+    }
+}

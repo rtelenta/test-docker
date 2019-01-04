@@ -1,0 +1,188 @@
+@import "../../../../assets/styles/01-settings/settings.scss";
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}
+
+@mixin placeholder_fix($color) {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        white-space:pre-line;  
+        position:relative;
+        top: -7px;
+        color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        white-space:pre-line;  
+        position:relative;
+        top: -7px;
+        color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        white-space:pre-line;  
+        position:relative;
+        top: -7px;
+        color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        white-space:pre-line;  
+        position:relative;
+        top: -7px;
+        color: $color;
+    }
+}
+
+.QuestionForm {
+    height: 100vh;
+    padding: 30px;
+    max-width: 480px;
+    width: 100%;
+    
+    &-box-title {
+        font-size: 14px;
+        width: 100%;
+        padding: 5px 0;
+        
+        &-input {
+            height: 48px;
+            padding: 0 18px;
+            transition: all ease-out 0.5s;  
+            background-color: $background-color;
+            border: 0;
+            font-size: 13px;
+            width: 100%;
+            color: $text-color-default;
+            border: 1px solid rgb(221, 227, 230);
+            @include placeholder(rgb(116, 142, 152));
+            
+            &:focus, &-valid {
+                background-color: #ffffff;
+              };
+           
+            &-error {
+                border: 1px solid rgb(255, 131, 137);
+            }  
+        }
+    }
+    &-box-type {
+        font-size: 14px;
+        width: 100%;
+        padding: 5px 0;
+
+        &-select {
+            height: 48px;
+            padding: 0 18px;
+            transition: all ease-out 0.5s;  
+            background-color: $background-color;
+            border: 1px solid rgb(221, 227, 230);
+            font-size: 13px;
+            width: 100%;
+            color: $text-color-default;
+
+            &:focus, &-valid {
+                background-color: #ffffff;
+              };
+            
+        }
+        
+    }
+
+    &-box-description {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    &-box-coins {
+        font-size: 14px;
+        width: 100%;
+        padding: 5px 0;
+
+        &-input {
+            border: 1px solid rgb(221, 227, 230);
+            padding: 0 18px;
+            min-height: 72px;
+            transition: all ease-out 0.5s;  
+            background-color: $background-color;
+            font-size: 13px;
+            width:100%;
+            color: $text-color-default;
+
+            &::-webkit-input-placeholder {
+                overflow: visible;
+                line-height: normal;
+            }
+    
+            @include placeholder_fix(rgb(116, 142, 152));
+            
+            &:focus, &-valid {
+                background-color: #ffffff;
+            };
+            
+            &-error {
+                border: 1px solid rgb(255, 131, 137);
+            };
+
+            &-info {
+                border: 1px solid rgb(130, 210, 173);
+            };
+        }
+        
+        .dfozZr {
+            line-height: 16px;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        margin: 15px 0;
+        font-size: 15px;
+        font-weight: 600;
+        min-height: 48px; 
+        display: flex;
+        justify-content: center;
+        background: rgb(155, 218, 214);
+        color: white;    
+        border:0;
+        box-shadow: 0px 5px 20px -10px rgb(0,0,0);
+        &[disabled] {
+            background: rgb(228, 233, 235);
+        }
+
+        svg {
+            margin: auto 0;
+        }
+
+        span {
+            margin: auto 0;
+        }
+
+        .Loader {
+            margin: 0 auto;
+            height: 30px;
+            width: 30px;
+
+            &-child:before {
+                background: white;
+            }
+        }
+    }
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

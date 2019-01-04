@@ -1,0 +1,31 @@
+@import "_config";
+
+.PresetDateRangePicker {
+  &_panel {
+    padding: 0 22px 11px;
+  }
+  &_button {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    background: 0 0;
+    border: 2px solid $color_persian_green_approx;
+    color: $color_persian_green_approx;
+    padding: 4px 12px;
+    margin-right: 8px;
+    font: inherit;
+    font-weight: 700;
+    line-height: normal;
+    overflow: visible;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    cursor: pointer;
+    &:active {
+      outline: 0;
+    }
+    &__selected {
+      color: $white;
+      background: $color_persian_green_approx;
+    }
+  }
+}

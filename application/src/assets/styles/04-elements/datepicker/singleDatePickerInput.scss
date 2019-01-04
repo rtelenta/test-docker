@@ -1,0 +1,87 @@
+@import "_config";
+
+.SingleDatePickerInput {
+  display: grid;
+  background-color: $white;
+  &__withBorder {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    border: 0px solid $alto;
+  }
+  &__rtl {
+    direction: rtl;
+  }
+  &__disabled {
+    background-color: $concrete;
+  }
+  &__block {
+    display: block;
+  }
+  &__showClearDate {
+    padding-right: 30px;
+  }
+  &_clearDate {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 10px 0 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(-50%);
+  }
+  &_clearDate {
+    &__default {
+      &:focus {
+        background: $alto;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+      }
+      &:hover {
+        background: $alto;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+      }
+    }
+    &__small {
+      padding: 6px;
+    }
+    &__hide {
+      visibility: hidden;
+    }
+    &_svg {
+      fill: $color_gunsmoke_approx;
+      height: 12px;
+      width: 15px;
+      vertical-align: middle;
+    }
+    &_svg__small {
+      height: 9px;
+    }
+  }
+  &_calendarIcon {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 0 5px 0 10px;
+    &_svg {
+      fill: $color_gunsmoke_approx;
+      height: 15px;
+      width: 14px;
+      vertical-align: middle;
+    }
+  }
+}

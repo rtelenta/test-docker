@@ -1,0 +1,82 @@
+.OfflineAlert {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 850;
+    display: flex;
+    padding: 15px 45px 15px 30px;
+    box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.2);
+    transition: transform .5s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    &--active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+
+        .icon {
+            fill: #FF8389;
+            margin: 0;
+            padding: 0;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__icon {
+        padding-right: 10px;
+        padding-top: 5px;
+
+        .icon {
+            fill: #FF8389;
+            margin: 0;
+            padding: 0;
+            width: 29px;
+            height: 29px;
+        }
+    }
+
+    &__title {
+        color: #FF8389;
+        line-height: 20px;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    &__description {
+        color: #748E98;
+        line-height: 20px;
+        font-size: 13px;
+    }
+
+    &__mini {
+        background: #FF8389;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 850;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 5px 25px;
+        transition: transform .5s ease;
+        transform: translateY(-100%);
+        opacity: 0;
+
+        &--active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

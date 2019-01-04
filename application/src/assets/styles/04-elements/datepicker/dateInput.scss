@@ -1,0 +1,81 @@
+@import "_config";
+@import "./../../01-settings/settings";
+@import "./../../04-elements/input";
+
+.DateInput {
+  @extend %formInput;
+  &:nth-child(n + 2) {
+    display: none;
+  }
+  &:after {
+    @extend %formInput_arrow;
+  }
+  &__small {
+    width: 97px;
+  }
+  &__block {
+    width: 100%;
+  }
+  &__disabled {
+    background: $concrete;
+    color: $alto;
+  }
+  &_input {
+    @extend %normal_text;
+    @extend %formInput_input;
+    @extend %formInput_input--active;
+    outline: 0;
+    background: $white;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    &[value=''] {
+      border-bottom: 1px solid $main-color;
+      color: rgb(193,193,193);
+    }
+    &__small {
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: .2px;
+      padding: 7px 7px 5px;
+    }
+    &__regular {
+      font-weight: normal;
+    }
+    &__readOnly {
+      //Instead of the line below you could use @include user-select($select)
+      user-select: none;
+    }
+    &__focused {
+      @extend %formInput_input--active;
+    }
+    &__disabled {
+      background: $concrete;
+      font-style: italic;
+    }
+  }
+  &_screenReaderMessage {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  &_fang {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    left: 22px;
+    z-index: 2;
+  }
+  &_fangShape {
+    fill: $white;
+  }
+  &_fangStroke {
+    stroke: $alto;
+    fill: transparent;
+  }
+}

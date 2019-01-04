@@ -1,0 +1,25 @@
+version: '2'
+services:
+
+  backend:
+    image: $IMAGE_DEV
+    container_name: $CONTAINER_NAME
+    ports: 
+      - 8080:80
+    #mem_limit: 300m
+    volumes: 
+      - ./../application:/application
+
+    command: ["npm run dev"]
+
+#  mysql:
+#    image: mysql:5.7
+#    container_name: $CONTAINER_DB_NAME
+#    environment:
+#      MYSQL_ROOT_PASSWORD: 1234
+#      MYSQL_DATABASE: flash_test
+#    ports:
+#      - 3306:3306
+#    command: ['--sql-mode=NO_BACKSLASH_ESCAPES','--character-set-server=utf8', '--collation-server=utf8_spanish2_ci']
+#    #volumes:
+#    #  - ./container/mysql:/docker-entrypoint-initdb.d

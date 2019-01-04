@@ -1,0 +1,18 @@
+.ReplySent {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    padding: 25% 10%;
+
+    &-text {
+        padding: 10%;
+        width: 100%;
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0px;
+            color: rgb(116, 142, 152);
+        }
+    }
+}

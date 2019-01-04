@@ -1,0 +1,113 @@
+@import "_config";
+
+.DayPickerKeyboardShortcuts {
+  &_buttonReset {
+    background: 0 0;
+    border: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    &:active {
+      outline: 0;
+    }
+  }
+  &_show {
+    width: 22px;
+    position: absolute;
+    z-index: 2;
+    &__bottomRight {
+      border-top: 26px solid transparent;
+      border-right: 33px solid $color_persian_green_approx;
+      bottom: 0;
+      right: 0;
+      &:hover {
+        border-right: 33px solid $color_teal_approx;
+      }
+    }
+    &__topRight {
+      border-bottom: 26px solid transparent;
+      border-right: 33px solid $color_persian_green_approx;
+      top: 0;
+      right: 0;
+      &:hover {
+        border-right: 33px solid $color_teal_approx;
+      }
+    }
+    &__topLeft {
+      border-bottom: 26px solid transparent;
+      border-left: 33px solid $color_persian_green_approx;
+      top: 0;
+      left: 0;
+      &:hover {
+        border-left: 33px solid $color_teal_approx;
+      }
+    }
+  }
+  &_showSpan {
+    color: $white;
+    position: absolute;
+    &__bottomRight {
+      bottom: 0;
+      right: -28px;
+    }
+    &__topRight {
+      top: 1px;
+      right: -28px;
+    }
+    &__topLeft {
+      top: 1px;
+      left: -28px;
+    }
+  }
+  &_panel {
+    overflow: auto;
+    background: $white;
+    border: 1px solid $alto;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    padding: 22px;
+    margin: 33px;
+  }
+  &_title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+  &_list {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  &_close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    z-index: 2;
+    &:active {
+      outline: 0;
+    }
+  }
+  &_closeSvg {
+    height: 15px;
+    width: 15px;
+    fill: $color_ghost_approx;
+    &:focus {
+      fill: $color_gunsmoke_approx;
+    }
+    &:hover {
+      fill: $color_gunsmoke_approx;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.Tabs {
+    padding: 0;
+    height: 48px;
+    border: rgb(155, 218, 214) 1px solid;
+    border-radius: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+        text-align: center;
+        font-size: 12px;
+        line-height: 48px;
+        color: rgb(74, 74, 74);
+        width: 100%;
+
+        &-active {
+            color: rgb(255, 255, 255);
+            background-color: rgb(155, 218, 214);
+            border-radius: 25px;
+            font-family: Raleway Bold, sans-serif;
+            font-weight: 600;
+        }
+    } 
+}

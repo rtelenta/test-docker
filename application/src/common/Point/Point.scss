@@ -1,0 +1,42 @@
+.Point {
+    margin: 0 0 0 auto;
+    width: auto;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        bottom: 15px;
+        left: 3px;
+        width: 90%;
+        top: 10px;
+        max-width:300px;
+        background: #777;
+        box-shadow: 0 15px 10px rgba(119, 119, 119, 0.25);
+        transform: rotate(-3deg);
+    }
+
+    &-inner {
+        background: white;
+        display: flex;
+        border-top-left-radius: 1.8ch;
+        border-bottom-left-radius: 1.8ch;
+        align-items: center;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 36px;
+        position: relative;
+    }
+    
+    &-icon {
+        margin: auto;
+    }
+    
+    &-number {
+        margin: 6px;
+        font-weight: 800; 
+        min-height: 24px;
+    }
+    
+}

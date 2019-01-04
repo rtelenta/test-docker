@@ -1,0 +1,29 @@
+.reply {
+    height: 100vh;
+
+    &-header {
+        border-bottom: 1px rgb(221, 227, 230) solid;
+
+        &-title {
+            margin-left: 29px;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &-card {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px rgb(221, 227, 230) solid;
+        padding: 30px;
+    }
+}
